@@ -1,0 +1,241 @@
+.header-menu{
+    height: 80px;
+    width: 100%;
+    background: var(--clr-fundo-site);
+    position: relative;
+    z-index: 1;
+}
+
+.menu__nav{
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__logo span{
+    color: #711FA5;
+    font-size: var(--medium-font-size);
+}
+
+.logo{
+    font-size: var(--medium-font-size);
+    color: var(--clr-menu-links);
+} 
+
+.menu__list{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__itens{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu__links{
+    color: var(--clr-menu-links);
+    font-size: var(--medium-font-size);
+}
+
+.menu__social{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu__social__icones{
+    width: 30px;
+}
+
+/* css do botao dark/mode */
+.menu__social__icones input[type="checkbox"]{ 
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+
+.menu__social__icones span{
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 30px;
+    background: #fefefe; /* adiciona cor de fundo ao botao checkbox*/
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5;
+    margin-bottom: 5px;
+}
+
+.menu__social__icones input[type="checkbox"]:checked ~ .check{
+    background: #121216; /* altera a cor de fundo do botao checkbox ao clicar*/
+}
+
+.menu__social__icones .check::after{
+    content:' ';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #121216; /* cria o "circulo" do botao checkbox na cor especificada a esquerda*/
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.menu__social__icones input[type="checkbox"]:checked ~ .check:after{
+    transform: translateX(60px); 
+}
+
+.menu__social__icones .check::before{
+    content:' ';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #fefe; /* altera a cor e o lado do circulo para direita quando clicado*/
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.menu__social__icones input[type="checkbox"]:checked ~ .check:before{
+    transform: translateX(0px); /* altera o lado do circulo para direita quando clicado*/
+}
+
+
+/* Media screen do menu em dispositivos grandes */
+@media screen  and (min-width:1201px){
+    .menu__mobile{
+        display: none;
+    }
+
+}
+
+
+
+
+@media screen  and (max-width:1200px){
+    .menu__mobile{
+        display: none;
+    }
+
+    .menu__list{
+        width: 70%;
+    }
+    
+}
+
+
+@media screen  and (max-width:1050px){
+    .menu__mobile{
+        display: none;
+    }
+
+    .menu__list{
+        width: 75%;
+    }
+
+}
+
+
+@media screen  and (max-width:985px){
+    .menu__mobile{
+        display: none;
+    }
+
+    .menu__list{
+        width: 70%;
+    }
+
+    .menu__links{
+        font-size: var(--normal-font-size);
+    }
+
+}
+
+
+/* Media screen do menu em dispositivos moveis */
+
+@media screen and (max-width:780px){
+    .header-menu{
+        height: 170px;
+    }
+
+    .menu__nav{
+        width: 100%;
+        height: 80vh;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu__logo span{
+        font-size: var(--big-font-size);
+    }
+    
+    .logo{
+        font-size: var(--big-font-size);
+    } 
+
+    .menu__mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu__mobile li:not(leter){
+        margin-bottom: 8px;
+    }
+
+    .menu__mobile li{
+        height: 5px;
+        width: 50px;
+        background-color: #7109e7;
+    }
+ 
+    .menu__list{
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu__list--active{
+        display: flex;
+    }
+
+    .header-mobile--active{
+        height: 700px;
+        width: 100vw;
+        position: relative;
+    }
+
+    .menu__itens, .menu__social {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu__links{
+        font-size: var(--big-font-size);
+        margin: 7px;
+    }
+
+    .menu__social__icones{
+        width: 40px;
+        margin: 10px;
+    }
+
+}
