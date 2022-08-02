@@ -198,7 +198,9 @@ body{
     padding: 10px;
     border: 2px solid var(--clr-borda-botao);
     color: var(--clr-texto);
+    border-radius: 10px;
     font-size: var(--normal-font-size);
+
 }
 
 .home__col2 a:hover{
@@ -412,9 +414,9 @@ body{
     width: 10px;
     height: 120%;
     border-radius: 20px;
-    background: linear-gradient(#F05033, #F05033);
-    -webkit-box-shadow: -2px 0px 43px 48px #F05033; 
-    box-shadow: -2px 0px 43px 48px #F05033;
+    background: linear-gradient(#FF1493, #FF1493);
+    -webkit-box-shadow: -2px 0px 43px 48px #FF1493; 
+    box-shadow: -2px 0px 43px 48px #FF1493;
     animation: cardsAnimate 7s linear infinite; /*animacao*/ 
 }
 
@@ -455,6 +457,30 @@ body{
     background: linear-gradient(#539E43, #539E43);
     -webkit-box-shadow: -2px 0px 43px 48px #539E43; 
     box-shadow: -2px 0px 43px 48px #539E43;
+    animation: cardsAnimate 7s linear infinite; /*animacao*/ 
+}
+
+#skill--card7::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 120%;
+    border-radius: 20px;
+    background: linear-gradient(#0000FF, #0000FF);
+    -webkit-box-shadow: -2px 0px 43px 48px #0000FF; 
+    box-shadow: -2px 0px 43px 48px #0000FF;
+    animation: cardsAnimate 7s linear infinite; /*animacao*/ 
+}
+
+#skill--card8::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 120%;
+    border-radius: 20px;
+    background: linear-gradient(#FF4500, #FF4500);
+    -webkit-box-shadow: -2px 0px 43px 48px #FF4500; 
+    box-shadow: -2px 0px 43px 48px #FF4500;
     animation: cardsAnimate 7s linear infinite; /*animacao*/ 
 }
 
@@ -624,6 +650,7 @@ body{
     padding: 10px;
     border: 2px solid var(--clr-borda-botao);
     color: var(--clr-texto);
+    border-radius: 10px;
     font-size: var(--normal-font-size);
 }
 
