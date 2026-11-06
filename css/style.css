@@ -697,3 +697,57 @@ body{
     color: var(--clr-texto);
     line-height: 1px;
 }
+
+
+/* PROJETOS DE DESIGN */
+
+.design {
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.design-subtitulo {
+    margin: 20px 0 40px;
+    font-size: 17px;
+}
+
+.design-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.design-card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+    transition: transform 0.3s ease;
+}
+
+.design-card:hover {
+    transform: translateY(-8px);
+}
+
+.design-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.design-card h3 {
+    margin: 18px 0 10px;
+}
+
+.design-card p {
+    font-size: 15px;
+}
+
+@media (max-width: 700px) {
+    .design-grid {
+        grid-template-columns: 1fr;
+    }
+}
